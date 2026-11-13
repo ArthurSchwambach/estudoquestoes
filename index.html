@@ -2238,7 +2238,7 @@
       "inbound HTTPS inspection only",
       "Full Deployment"
     ],
-    "correct": 0,
+    "correct": 1,
     "category": "Module 8: HTTPS Inspection",
     "explanation": "No Check Point R, o 'Learning Mode' permite que o Security Gateway inspecione uma pequena porcentagem representativa do tráfego HTTPS para coletar métricas reais de uso de CPU e memória antes da implantação completa em produção.",
     "source": "Brave-Dumps CCSA R82 #Q79"
@@ -2406,9 +2406,9 @@
       "Perimeter, Cloud/Data Center, East-West-Traffic, Guest Network",
       "Perimeter, Fully Overlapping Encryption Domain, Partially Overlapping Encryption Domain, Proper Subset."
     ],
-    "correct": 2,
-    "category": "Module 1: Introduction to Quantum Security",
-    "explanation": "Os quatro principais perfis pré-definidos de implantação por segmento no Autonomous Threat Prevention do R são: Perimeter, Cloud/Data Center, Internal Network e Guest Network (além do perfil Monitor). Cada perfil ajusta automaticamente as blades e níveis de severidade adequados para o tráfego daquele segmento de rede.",
+    "correct": 1,
+    "category": "Module 10: Threat Prevention Fundamentals",
+    "explanation": "A alternativa correta é a B: Perimeter, Cloud/Data Center, Internal Network, Guest Network (além do perfil Monitor para auditoria passiva). No Autonomous Threat Prevention do Check Point Quantum R82, os 4 perfis pré-definidos de segmento são: 1) Perimeter; 2) Cloud/Data Center; 3) Internal Network; 4) Guest Network. A opção C está errada porque 'East-West-Traffic' é o fluxo inspecionado pelo Cloud/Data Center, e NÃO o nome do perfil.",
     "source": "Brave-Dumps CCSA R82 #Q91"
   },
   {
@@ -2644,9 +2644,9 @@
       "the Drop action",
       "the Explicit Cleanup Rule if exists"
     ],
-    "correct": 3,
+    "correct": 1,
     "category": "Module 5: Policy Layers",
-    "explanation": "Caso um pacote entre em uma Inline Layer e não coincida com nenhuma de suas regras explícitas internas, é aplicada a 'Implicit Cleanup Rule' configurada para aquela sub-política.",
+    "explanation": "A alternativa correta é a B: 'the Implicit Cleanup Rule'. Quando o tráfego entra em uma Inline Layer e não casa com nenhuma regra explícita interna, o gateway aplica a Implicit Cleanup Rule dessa camada (que por padrão executa Drop). Se existisse uma regra explícita de cleanup, ela seria uma das regras avaliadas; ao não coincidir com regra nenhuma, aplica-se a Implicit Cleanup Rule.",
     "source": "Brave-Dumps CCSA R82 #Q108"
   },
   {
@@ -3710,7 +3710,7 @@
     ],
     "correct": 3,
     "category": "Module 2: Administrator Account Management",
-    "explanation": "O botão 'Command Line' na parte inferior da interface do SmartConsole é utilizado para abrir uma sessão direta da Management API (mgmt_cli) conectada ao Security Management Server, permitindo executar comandos de automação.",
+    "explanation": "A alternativa correta é a D: 'Open API session on Management Server'. O botão 'Command Line' na barra inferior do SmartConsole (atalho F9) abre um painel integrado de linha de comando para a Check Point Management API (motor mgmt_cli). Ele permite executar comandos de automação e scripts diretamente contra o Security Management Server via Web Services API. ⚠️ Pegadinha clássica de prova: o SmartConsole NÃO abre conexão SSH (nem para o Gateway, nem para o Management), e sim uma sessão nativa da Management API.",
     "source": "Brave-Dumps CCSA R82 #Q184"
   },
   {
