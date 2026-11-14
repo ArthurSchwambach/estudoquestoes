@@ -7,7 +7,7 @@
     <meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf9f5">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Check Point CCSA R82 | Simulado Oficial 191 Questões</title>
+    <title>Check Point CCSA R82 | Simulado Oficial (Brave-Dumps + Cenários Daypo)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -1169,9 +1169,10 @@
         <!-- Mode Switcher Tabs + Timer -->
         <div class="header-left" style="width: 100%; justify-content: space-between;">
             <div class="mode-tabs">
-                <button class="mode-btn active" id="btnStudyMode" title="Todas as 191 questões com feedback imediato">📚 Estudo (191)</button>
-                <button class="mode-btn" id="btnExamMode" title="Simulado cronometrado de 100 questões (120 min)">⏱️ Exame (100)</button>
-                <button class="mode-btn" id="btnBulletsMode" title="Treino rápido com 10 questões aleatórias">⚡ Bullets (10)</button>
+                <button class="mode-btn active" id="btnStudyMode" title="Todas as 191 questões oficiais da Brave-Dumps com feedback imediato">📚 Estudo (191)</button>
+                <button class="mode-btn" id="btnStudyV2Mode" title="42 questões de cenários inéditas do Daypo com feedback imediato">🎯 Estudo V2 (42)</button>
+                <button class="mode-btn" id="btnExamMode" title="Simulado cronometrado de 100 questões (Brave-Dumps)">⏱️ Exame (100)</button>
+                <button class="mode-btn" id="btnBulletsMode" title="Treino rápido com 10 questões aleatórias (Brave-Dumps)">⚡ Bullets (10)</button>
             </div>
 
             <!-- Exam Timer -->
@@ -1186,7 +1187,7 @@
             <div class="score-pill" id="topScorePill">
                 <span><span class="score-correct" id="statCorrectTop">0</span> ✓</span>
                 <span><span class="score-wrong" id="statWrongTop">0</span> ✗</span>
-                <span id="statRemainingTop">• 191 restantes</span>
+                <span id="statRemainingTop">• 233 restantes</span>
             </div>
 
             <div style="display: flex; gap: 6px;">
@@ -1256,7 +1257,7 @@
                 <div class="map-header">
                     <h2 class="map-title">
                         <span id="mapTitleText">Mapa de Questões</span>
-                        <span class="map-total-pill" id="mapTotalPill">191</span>
+                        <span class="map-total-pill" id="mapTotalPill">233</span>
                     </h2>
                 </div>
 
@@ -1414,6 +1415,7 @@
 
     <!-- App Data and Scripts -->
     <script>
+
         // Official 191 Questions from Brave-Dumps (Check Point CCSA R82)
         const BRAVE_QUESTIONS = [
   {
@@ -1579,9 +1581,9 @@
       "Objects Selector",
       "Objects Menu"
     ],
-    "correct": 1,
+    "correct": 3,
     "category": "Module 3: Object Management",
-    "explanation": "Na janela principal da GUI do SmartConsole, o controle dedicado para visualização e gerenciamento detalhado de objetos é o 'Objects Explorer' (ou Object Explorer), que permite navegar, filtrar e exportar objetos.",
+    "explanation": "Na janela principal da GUI do SmartConsole, o menu de controle disponível diretamente na interface é o Objects Menu (menu Objects). A ferramenta de busca aprofundada chama-se Object Explorer (no singular) e abre como uma janela dedicada (Ctrl+E), portanto a opção correta é Objects Menu.",
     "source": "Brave-Dumps CCSA R82 #Q12"
   },
   {
@@ -2517,9 +2519,9 @@
       "inbound HTTPS inspection only",
       "Full Deployment"
     ],
-    "correct": 0,
+    "correct": 1,
     "category": "Module 8: HTTPS Inspection",
-    "explanation": "No Check Point R, o 'Learning Mode' permite que o Security Gateway inspecione uma pequena porcentagem representativa do tráfego HTTPS para coletar métricas reais de uso de CPU e memória antes da implantação completa em produção.",
+    "explanation": "No Check Point R82, o 'Learning Mode' permite que o Security Gateway inspecione uma pequena porcentagem representativa do tráfego HTTPS para coletar métricas reais de uso de CPU e memória antes da implantação completa em produção.",
     "source": "Brave-Dumps CCSA R82 #Q79"
   },
   {
@@ -4092,34 +4094,644 @@
   }
 ];
 
+        // Scenario 42 Questions from Daypo (Check Point CCSA R82)
+        const DAYPO_QUESTIONS = [
+  {
+    "id": 192,
+    "question": "You are tasked with setting up a new Check Point environment for your organization. Your manager asks you to explain the roles of each component in the Three-Tier Architecture before procurement begins. During your explanation, you need to clarify which component is responsible for storing and managing security policies, and which component enforces those policies at the network perimeter. Which two components fulfill these roles respectively?",
+    "options": [
+      "The Security Management Server stores policies; the Security Gateway enforces them at the network edge",
+      "The Security Gateway stores policies; the Security Management Server enforces them at the network edge",
+      "SmartConsole stores and manages policies; the Security Gateway enforces them",
+      "The Security Management Server enforces policies; the Log Server stores backup copies for auditing",
+      "Both the Security Gateway and Security Management Server share policy storage and enforcement responsibilities equally"
+    ],
+    "correct": 0,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "Na Arquitetura Three-Tier da Check Point: o Security Management Server (SMS) é responsável por armazenar, compilar e gerenciar os objetos e políticas de segurança, enquanto o Security Gateway aplica essas regras diretamente no tráfego de borda da rede.",
+    "source": "Daypo CCSA R82 Test #1 (Q2)"
+  },
+  {
+    "id": 193,
+    "question": "You are a Check Point administrator responsible for managing a mid-sized organization's security infrastructure. Your organization has multiple teams that need to configure and deploy security policies simultaneously. One team is working on updating the access control policy, while another team needs to modify threat prevention rules. You notice that when you attempt to install a policy, a message indicates that another administrator is currently installing a policy as well. You want to understand the current state of administrator sessions and determine whether concurrent policy installations are supported in Check Point R82. Which of the following statements accurately describes how Check Point handles concurrent administrator sessions and policy installations?",
+    "options": [
+      "Check Point supports concurrent administrator sessions, but only one administrator can install a policy at a time; other administrators must wait for the current installation to complete before they can deploy their changes.",
+      "Check Point supports unlimited concurrent policy installations from multiple administrators without any restrictions or queuing mechanisms.",
+      "Check Point does not support concurrent administrator sessions; only one administrator can log in toSmartConsole at a time to prevent any conflicts.",
+      "Concurrent administrator sessions are allowed, but concurrent policy installations require administrators to manually merge their changes before deployment."
+    ],
+    "correct": 0,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "No Check Point R82, múltiplos administradores podem trabalhar concorrentemente em sessões distintas no SmartConsole. No entanto, a instalação de política em um gateway é uma operação exclusiva por vez: apenas um administrador pode instalar a política naquele momento, e os demais devem aguardar a conclusão antes de implantar suas alterações.",
+    "source": "Daypo CCSA R82 Test #1 (Q3)"
+  },
+  {
+    "id": 194,
+    "question": "You are configuring the security policy for your organization and need to organize rules into logical sections to improve manageability and clarity. Your security requirements include general access control rules, a dedicated demilitarized zone (DMZ) segment with specific inspection rules, and threat prevention enforcement that should apply across all traffic. You are familiar with Check Point's policy layer concept and want to implement the most appropriate layer structure. Which of the following best describes the appropriate use of Ordered Layers and Inline Shared Layers (such as inline DMZ layers) in Check Point R82?",
+    "options": [
+      "Ordered Layers are used for sequential inspection of traffic, while Inline Shared Layers (such as inline DMZ layers) are called at specific points within a parent layer to provide targeted inspection; both layer types are processed in the order they are defined in the policy hierarchy.",
+      "Ordered Layers and Inline Shared Layers are functionally identical; the choice between them is purely for organizational preference with no impact on traffic inspection flow.",
+      "Inline Shared Layers are the primary inspection mechanism, and Ordered Layers are deprecated legacy structures maintained only for backward compatibility.",
+      "Ordered Layers enforce rules sequentially, but Inline Shared Layers bypass all parent layer rules and apply independently to all traffic regardless of where they are referenced."
+    ],
+    "correct": 0,
+    "category": "Module 5: Policy Layers",
+    "explanation": "As Ordered Layers são avaliadas sequencialmente camada por camada. Já as Inline Shared Layers (como camadas inline de DMZ) são chamadas pontualmente dentro de uma regra pai para inspeção granular e direcionada de um segmento específico.",
+    "source": "Daypo CCSA R82 Test #1 (Q4)"
+  },
+  {
+    "id": 195,
+    "question": "Your organization has deployed Check Point R82 with a Security Management Server, dedicated Log Server, and multiple security gateways. You want to monitor the real-time health and performance of your Check Point infrastructure, including CPU usage, memory consumption, and connection statistics on each gateway. You have configured log management and are familiar with SmartLog for reviewing security events. You are now tasked with implementing comprehensive system monitoring. Which of the following components or features should you use to monitor the status and performance metrics of your Check Point systems in real-time?",
+    "options": [
+      "The Monitoring Blade in SmartConsole, which provides dashboards and real-time metrics for gateway health, system performance, and infrastructure status.",
+      "SmartLog queries exclusively, since SmartLog is designed to display both security events and all system performance metrics in a single interface.",
+      "The Gaia CLI on each gateway, which is the only tool capable of displaying real-time performance metrics and system health information.",
+      "Custom administrator profiles, which can be configured to display performance data in the SmartConsole interface automatically."
+    ],
+    "correct": 0,
+    "category": "Module 6: Security Operations Monitoring",
+    "explanation": "O Monitoring Blade integrado ao SmartConsole fornece dashboards gráficos e métricas de desempenho em tempo real dos gateways e servidores (consumo de CPU, memória, conexões ativas e status de hardware).",
+    "source": "Daypo CCSA R82 Test #1 (Q5)"
+  },
+  {
+    "id": 196,
+    "question": "You are a new Check Point administrator being onboarded to manage security policies for your organization.Your team lead asks you to explain the three main components of the Check Point Three-Tier Architecture and their specific roles. During your first week, you need to confirm that you can identify which component is responsible for storing and enforcing policy rules on the actual network perimeter, which component manages policy configuration and administrative tasks, and which component provides the graphical interface for administrators. Which of the following correctly identifies the three main components of the Check Point Three-Tier Architecture and their primary responsibilities?",
+    "options": [
+      "The Security Management Server (SMS) stores policies and manages administration, the Security Gateway enforces policies and inspects traffic at the network perimeter, and SmartConsole is the management interface used by administrators to configure and deploy policies.",
+      "The Security Gateway is the central management hub that stores all policies, SmartConsole is deployed on each gateway to enforce rules locally, and the Security Management Server is a backup component used only during management server failures.",
+      "SmartConsole runs on the Security Gateway to perform deep packet inspection, the Security Management Server provides the graphical interface, and the Gaia Portal serves as the enforcement engine at the network perimeter.",
+      "The three components are SmartLog, the Log Server, and the Monitoring Blade; together they form the architecture that stores, manages, and enforces security policies."
+    ],
+    "correct": 0,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "Na arquitetura de três camadas: o Security Management Server (SMS) armazena a base de dados de políticas e objetos; o Security Gateway impõe e inspeciona o tráfego de rede; e o SmartConsole é a interface gráfica (GUI) utilizada pelos administradores para gerenciar o ambiente.",
+    "source": "Daypo CCSA R82 Test #1 (Q6)"
+  },
+  {
+    "id": 197,
+    "question": "You are assigned to create a new administrator account for a junior team member who will primarily be responsible for monitoring security logs and generating reports, but should not have permission to modify security policies or deploy changes. Your manager emphasizes that you must follow the principle of least privilege to ensure proper separation of duties. You open SmartConsole and navigate to the administrator account management section. Which of the following approaches best ensures that the junior administrator receives appropriate permissions aligned with the principle of least privilege?",
+    "options": [
+      "Create a new administrator account and assign it a predefined administrator profile that grants readonly access to logs and monitoring features, while restricting policy modification and installation permissions.",
+      "Create a new administrator account with the default 'Administrator' profile and then manually disable all policy installation permissions after account creation.",
+      "Create a new administrator account with no profile assignment initially; the administrator will automatically receive permissions based on their username.",
+      "Assign the junior administrator a custom profile that grants full access to all SmartConsole features initially, and then have the user manually select which features to avoid using."
+    ],
+    "correct": 0,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "Para conceder privilégios adequados a um novo administrador júnior que precisa apenas auditar configurações e visualizar logs, deve-se criar uma conta de administrador e associá-la a um perfil pré-definido (ou customizado) com permissões de 'Read-Only' (somente leitura).",
+    "source": "Daypo CCSA R82 Test #1 (Q7)"
+  },
+  {
+    "id": 198,
+    "question": "Your organization is implementing HTTPS Inspection to gain visibility into encrypted traffic and enforce security policies on HTTPS connections. During testing, you notice that client browsers are displaying certificate trust warnings when accessing HTTPS-protected web servers through your security gateway. Your security team wants to resolve these warnings while maintaining the ability to inspect encrypted traffic. Which of the following best explains the cause of the certificate warnings and the appropriate remediation in a Check Point R82 HTTPS Inspection deployment?",
+    "options": [
+      "The certificate warnings occur because the security gateway is presenting its own certificate (signed by the Check Point internal CA) instead of the server's original certificate. To resolve this, the Check Point internal CA certificate must be deployed to client systems as a trusted authority, allowing clients to trust certificates signed by that CA.",
+      "The certificate warnings are caused by an incorrect HTTPS Inspection rule configuration. The solution is to disable HTTPS Inspection for all HTTPS traffic, which will prevent the gateway from intercepting encrypted connections.",
+      "The warnings indicate that the security gateway lacks a valid SSL certificate. You should install a publicly signed SSL certificate on the security gateway to eliminate browser warnings.",
+      "Certificate warnings are expected and normal in HTTPS Inspection deployments; clients should be instructed to add exceptions in their browsers to bypass the warnings without further configuration."
+    ],
+    "correct": 0,
+    "category": "Module 8: HTTPS Inspection",
+    "explanation": "No HTTPS Inspection (Outbound), o Security Gateway atua como proxy TLS gerando dinamicamente certificados assinados pela sua própria CA interna. Se a CA da Check Point não estiver instalada nos navegadores e sistemas operacionais dos clientes como autoridade raiz confiável (Trusted Root CA), os usuários verão avisos de segurança de certificado.",
+    "source": "Daypo CCSA R82 Test #1 (Q16)"
+  },
+  {
+    "id": 199,
+    "question": "You are configuring Application Control and URL Filtering policies for your organization to block access to certain websites and restrict the use of non-business-critical applications. You have created several rules to block specific URL categories and application types. During initial testing, you discover that some legitimate business applications are being blocked incorrectly, and you are concerned about the performance impact of extensive rule processing. Your manager asks you to describe the key challenges and best practices. Which of the following best describes a common pitfall and appropriate mitigation strategy for Application Control and URL Filtering deployments?",
+    "options": [
+      "Overly restrictive policies can block legitimate applications and websites. To mitigate this risk, you should start with less restrictive rules, test thoroughly, and use application/URL identification reports to validate that only intended traffic is blocked before deploying to production.",
+      "Application Control and URL Filtering automatically identify all applications and websites with 100% accuracy, so overly restrictive policies are not a concern. The primary risk is instead performance degradation, which can only be resolved by disabling the feature entirely.",
+      "The main pitfall is that URL Filtering rules always interfere with legitimate web traffic because they inspect encrypted HTTPS connections by default. Disable HTTPS inspection for all URL Filtering rules to preven misidentification.",
+      "Once Application Control and URL Filtering rules are deployed, they cannot be modified or adjusted without completely restarting the security gateway."
+    ],
+    "correct": 0,
+    "category": "Module 9: Application Control and URL Filtering",
+    "explanation": "Políticas excessivamente restritivas de Application Control e URL Filtering podem bloquear aplicações legítimas e fluxos de negócios. A melhor prática inicial é implementar regras em modo de monitoramento ('Detect' ou com log detalhado), validar o tráfego e realizar testes graduais antes de aplicar ações de 'Drop' estritas.",
+    "source": "Daypo CCSA R82 Test #1 (Q24)"
+  },
+  {
+    "id": 200,
+    "question": "You are preparing to deploy Autonomous Threat Prevention on your security gateways to protect against contemporary threats including malware, botnets, and advanced attacks. Before enabling the feature, your security director asks you to explain the core components of Autonomous Threat Prevention and the potential risks of aggressive threat prevention profiles. Which of the following accurately describes essential elements of Check Point's Autonomous Threat Prevention and a key consideration when deploying it?",
+    "options": [
+      "Autonomous Threat Prevention integrates Anti-Virus, Anti-Bot, IPS, and SandBlast Emulation/Extraction to provide comprehensive threat detection. An important consideration is that aggressive threat prevention profiles may generate high false-positive rates, causing legitimate traffic to be blocked; therefore, profiles should be tuned appropriately for your environment.",
+      "Autonomous Threat Prevention consists only of Anti-Virus signatures and does not include advanced features like IPS or behavioral analysis. False positives are not a significant concern because threat signatures are always accurate.",
+      "Autonomous Threat Prevention requires manual signature updates from Check Point on a weekly basis; without these updates, the system cannot detect any threats and should be disabled until updates are available.",
+      "The primary component of Autonomous Threat Prevention is the Monitoring Blade, which performs all threat detection and prevention functions automatically without requiring any administrator configuration."
+    ],
+    "correct": 0,
+    "category": "Module 10: Threat Prevention Fundamentals",
+    "explanation": "O Autonomous Threat Prevention da Check Point integra de forma centralizada e orientada a inteligência artificial os motores de IPS, Anti-Virus, Anti-Bot e SandBlast (Threat Emulation e Threat Extraction), aplicando perfis automáticos baseados nas melhores práticas da Check Point.",
+    "source": "Daypo CCSA R82 Test #2 (Q2)"
+  },
+  {
+    "id": 201,
+    "question": "You are reviewing the security policy that was recently created by a colleague. The policy contains several access control rules, but you notice that a specific rule denying traffic to a particular destination is placed near the bottom of the rule list, after multiple allow rules that would match the same traffic. When you ask your colleague about the rule order, they mention that rule order should not matter because the firewall checks all rules before making a decision. You are concerned about this misunderstanding. Which of the following correctly describes how Check Point processes security rules and why rule order is critical in the Standard Security Policy?",
+    "options": [
+      "Check Point processes security rules sequentially from top to bottom and stops at the first rule that matches the traffic; this means rule order is critical, and a deny rule placed below an allow rule will never be evaluated for that traffic because the allow rule matches first.",
+      "Check Point evaluates all rules in parallel regardless of order, then selects the most specific rule to apply. Rule order does not matter because the system intelligently chooses the best matching rule.",
+      "Rule order matters only for rules that use the same source and destination; rules with different sources or destinations can be placed in any order without affecting traffic inspection.",
+      "The firewall applies all matching rules in a single transaction, so rule order has no impact on the final outcome; the system combines all matching rules to determine the final action."
+    ],
+    "correct": 0,
+    "category": "Module 4: Security Policy Management",
+    "explanation": "O mecanismo de inspeção de regras da Check Point opera no modelo 'First Match' (primeira correspondência): os pacotes são avaliados sequencialmente de cima para baixo (top to bottom) e, assim que ocorre a primeira regra compatível, sua ação é executada e o processamento daquela camada é finalizado.",
+    "source": "Daypo CCSA R82 Test #2 (Q10)"
+  },
+  {
+    "id": 202,
+    "question": "Which tool provides a graphical interface for centralized management of the Check Point Security environment?",
+    "options": [
+      "Gaia Portal",
+      "Security Management Server",
+      "SmartConsole",
+      "SmartEvent"
+    ],
+    "correct": 2,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "O SmartConsole é o aplicativo cliente gráfico unificado da Check Point utilizado para gerenciar políticas de segurança, visualizar logs, monitorar gateways e administrar todo o ambiente Quantum Security.",
+    "source": "Daypo CCSA R82 Test #2 (Q12)"
+  },
+  {
+    "id": 203,
+    "question": "What is the access available to connect to cli?",
+    "options": [
+      "SCP",
+      "SSH",
+      "SNMP",
+      "FTP"
+    ],
+    "correct": 1,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "O acesso remoto à interface de linha de comando (CLI) do Gaia OS é realizado primariamente via protocolo SSH seguro (porta TCP 22), além do acesso local via console serial.",
+    "source": "Daypo CCSA R82 Test #2 (Q15)"
+  },
+  {
+    "id": 204,
+    "question": "You are an administrator responsible for maintaining network object definitions in your SmartConsole environment. Your organization has grown, and the number of network objects (subnets, hosts, and security zones) has increased significantly. A colleague has created several new host objects for servers that you believe may already exist in the environment. Before your colleague deploys a new policy that references these objects, you want to verify the impact and identify any redundancy. Which of the following best describes the importance of managing SmartConsole objects and a key risk of creating redundant or incorrectly configured objects?",
+    "options": [
+      "SmartConsole objects are the building blocks of security policies. Redundant or incorrectly configured objects can cause unintended policy behavior, such as traffic being matched or excluded unexpectedly, and can complicate policy management and troubleshooting by introducing confusion and inconsistency.",
+      "SmartConsole objects are merely decorative elements used for documentation purposes; they have no impact on actual traffic inspection or policy enforcement.",
+      "Redundant objects automatically consolidate during policy installation, so creating duplicate objects is not a concern; the system resolves conflicts without administrator intervention.",
+      "Objects must be created exactly once and can never be modified after policy deployment; therefore, all objects must be perfect before the initial installation."
+    ],
+    "correct": 0,
+    "category": "Module 3: Object Management",
+    "explanation": "Objetos de rede (Network Objects) no SmartConsole representam hosts, redes, grupos, serviços e intervalos de IP. Eles são os blocos construtivos fundamentais reutilizáveis na elaboração das regras da Security Policy.",
+    "source": "Daypo CCSA R82 Test #2 (Q18)"
+  },
+  {
+    "id": 205,
+    "question": "You are a new Check Point Security Administrator tasked with setting up administrator accounts for your team. Your organization requires that three different administrators manage different aspects of the security infrastructure: one should manage only network objects, another should manage only security policies, and a third should have read-only access to view logs and system status. Which of the following approaches should you use to implement this requirement while maintaining proper access control and accountability?",
+    "options": [
+      "Create three separate administrator accounts and assign each a custom profile with permissions tailored to their specific responsibilities",
+      "Create one administrator account with full permissions and have all three users share the same login credentials",
+      "Create three administrator accounts but assign the same default profile to all of them, then restrict access using only network-level firewall rules",
+      "Create three administrator accounts and assign the predefined Super User profile to each, as this is required for managing different object types",
+      "Create a single role-based account that automatically switches permissions based on which administrator logs in"
+    ],
+    "correct": 0,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "A melhor prática de gerenciamento de administradores no Check Point consiste em criar contas individuais para cada operador e associá-las a perfis baseados em funções (Role-Based Profiles / Permission Profiles) que concedem o princípio de menor privilégio necessário.",
+    "source": "Daypo CCSA R82 Test #2 (Q27)"
+  },
+  {
+    "id": 206,
+    "question": "Which of the following groups represents valid administrator types in the Quantum Security environment?",
+    "options": [
+      "Quantum global admin, Quantum local admin, Quantum cloud admin",
+      "CloudGuard admin, Harmony admin, Infinity admin",
+      "Firewall admin, Management admin, OS admin",
+      "Gaia admin, Primary SMS admin, SmartConsole admin"
+    ],
+    "correct": 3,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "No ambiente Quantum Security, os tipos de contas de administração incluem a conta de administração do sistema operacional Gaia (Gaia admin / WebUI), a conta primária de gerenciamento (Primary SMS admin) e os administradores do SmartConsole com perfis de permissão específicos.",
+    "source": "Daypo CCSA R82 Test #2 (Q28)"
+  },
+  {
+    "id": 207,
+    "question": "You are configuring security policy for your organization and need to implement traffic control based on user identity. Your security team wants to allow specific users in the Finance department to access a particular server, but deny access to all other users. You have already collected user identity information through an Identity Collector. What is the next step you should take in SmartConsole to enforce this requirement?",
+    "options": [
+      "Create a User Access Role that maps the Finance department users, then create an Access Control Policy rule that uses this role as the source and specifies the appropriate server and action",
+      "Modify the network objects for Finance department users in the GATEWAYS & SERVERS view and then create a policy rule based on these modified objects",
+      "Create an Ordered Layer specifically for identity-based rules and configure threat prevention signatures to recognize Finance department traffic patterns",
+      "Configure HTTPS Inspection on the Security Gateway to decrypt user traffic and manually identify which packets belong to Finance department users",
+      "Use the SmartLog query interface to filter historical logs by user identity and then create a policy rule based on the filtered results"
+    ],
+    "correct": 0,
+    "category": "Module 7: Identity Awareness",
+    "explanation": "Para restringir o acesso a um servidor contábil apenas a membros de um departamento específico (como Finanças), cria-se um objeto 'Access Role' no SmartConsole mapeando o grupo do departamento no Active Directory e associa-se esse Access Role na coluna Source da regra de segurança.",
+    "source": "Daypo CCSA R82 Test #3 (Q5)"
+  },
+  {
+    "id": 208,
+    "question": "What are the capabilities integrated into a Threat Prevention Policy?",
+    "options": [
+      "IPS Anti-Bot, Anti-Virus, Content Awareness, URL Filtering",
+      "IPS, Anti-Bot, Anti-Virus, SandBlast",
+      "IPS, Anti-Bot, Application Control, URL Filtering",
+      "Application Control, URL Filtering, Content Awareness, IPS"
+    ],
+    "correct": 1,
+    "category": "Module 10: Threat Prevention Fundamentals",
+    "explanation": "Uma Threat Prevention Policy integra os seguintes motores de proteção avançada: IPS (Intrusion Prevention System), Anti-Bot, Anti-Virus e a tecnologia SandBlast (Threat Emulation e Threat Extraction).",
+    "source": "Daypo CCSA R82 Test #3 (Q11)"
+  },
+  {
+    "id": 209,
+    "question": "You are reviewing a security policy that has multiple Ordered Layers configured: a base Access Control layer, a DMZ Inline layer, and a custom Application Control layer. A user reports that an application is being blocked unexpectedly, even though a rule in the Application Control layer should allow it. You need to understand how traffic flows through these policy layers to diagnose the problem. Which of the following correctly describes the order in which Check Point inspects traffic through these policy layers?",
+    "options": [
+      "Traffic is inspected by the Access Control layer first, and if a rule matches (whether it is an Allow or Drop action), inspection proceeds to the DMZ Inline layer and then the Application Control layer",
+      "Traffic is inspected by all policy layers in the order they appear in SmartConsole, and inspection stops only when a Drop or Reject rule is matched",
+      "Traffic is inspected through all layers sequentially until a rule matches that results in a final disposition (Accept or Drop); if no rule matches in the Access Control layer, the traffic is denied by default regardless of subsequent layers",
+      "Inline DMZ layers are always inspected before Ordered Layers, and the Application Control layer is only processed if the DMZ layer permits the traffic",
+      "Each layer operates independently, and traffic is processed in parallel through all layers simultaneously, with the most restrictive rule taking precedence"
+    ],
+    "correct": 2,
+    "category": "Module 5: Policy Layers",
+    "explanation": "Em uma política com múltiplas Ordered Layers, o tráfego é inspecionado sequencialmente através de cada camada: se o pacote for aceito ('Accept') na primeira camada, ele é encaminhado para a próxima camada ordenada até que todas as camadas o aprovem ou até ocorrer uma ação terminativa de 'Drop'.",
+    "source": "Daypo CCSA R82 Test #3 (Q13)"
+  },
+  {
+    "id": 210,
+    "question": "You are a Check Point administrator managing a distributed security infrastructure with a Security Management Server, multiple Security Gateways, and a dedicated Log Server. A junior administrator reports difficulty accessing the SmartConsole interface from their workstation, though network connectivity to the Management Server is confirmed. You want to verify that the administrator has the appropriate permissions and understand the three-tier architecture relationships. Which of the following best describes the primary function of the Security Management Server in the Check Point Three-Tier Architecture and why SmartConsole connectivity issues may occur?",
+    "options": [
+      "The Security Management Server stores encrypted traffic logs and generates threat intelligence reports; SmartConsole connectivity fails when the Log Server is unreachable because SmartConsole requires log data for all operations.",
+      "The Security Management Server is the central management point responsible for policy creation, administrator authentication, and distribution of security policies to Security Gateways; SmartConsole connectivity requires proper network access to the Management Server and valid administrator credentials with appropriate profiles assigned.",
+      "The Security Management Server acts as a backup gateway for redundancy; SmartConsole connectivity issues are typically caused by firewall rules blocking traffic between the workstation and the Security Gateways rather than the Management Server.",
+      "The Security Management Server processes all encrypted traffic inspection; SmartConsole must connect directly to Security Gateways to function, and the Management Server is only used for initial configuration."
+    ],
+    "correct": 1,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "O Security Management Server (SMS) é o ponto focal centralizado de controle na arquitetura distribuída da Check Point. Ele compila, armazena e distribui os pacotes de políticas de segurança para todos os gateways gerenciados.",
+    "source": "Daypo CCSA R82 Test #3 (Q21)"
+  },
+  {
+    "id": 211,
+    "question": "You are a newly promoted Check Point Certified Security Administrator responsible for managing a distributed environment with multiple Security Gateways, a centralized Security Management Server (SMS), and a dedicated Log Server. During your first week, you need to understand how traffic flows through the infrastructure and how policy decisions are applied at different points. Which of the following correctly describes the role of each component in the Check Point Three-Tier Architecture?",
+    "options": [
+      "The Security Management Server stores policies and sends them to Gateways; Gateways inspect and enforce traffic according to installed policies; the Log Server collects and analyzes traffic logs from the Gateways.",
+      "The Security Gateway stores the master copy of all security policies; the Management Server coordinates policy installation; the Log Server enforces access control rules on outbound traffic.",
+      "The Security Management Server inspects encrypted traffic; Security Gateways relay policy decisions to the Log Server; the Log Server applies threat prevention rules to all inbound connections.",
+      "The Log Server manages administrator access and policy versioning; Security Gateways authenticate users; the Management Server performs real-time traffic inspection and blocking.",
+      "The Security Gateway serves as the policy database; the Management Server performs threat prevention scanning; the Log Server distributes policies to all network devices."
+    ],
+    "correct": 0,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "O Security Management Server (SMS) armazena e compila as políticas de segurança e objetos criados pelos administradores, enviando os dados compilados para os Security Gateways no momento da operação de 'Install Policy'.",
+    "source": "Daypo CCSA R82 Test #3 (Q30)"
+  },
+  {
+    "id": 212,
+    "question": "Which Identity Awareness client is used in high-volume environments that use Microsoft Active Directory, Cisco Identity Services, NetIQ eDirectory, or Syslog?",
+    "options": [
+      "Identity Agent for a Terminal Server",
+      "Identity Collector",
+      "RADIUS Accounting",
+      "Identity Agent for a User Endpoint Computer"
+    ],
+    "correct": 1,
+    "category": "Module 7: Identity Awareness",
+    "explanation": "O Identity Collector é um agente dedicado e escalável projetado para ambientes de grande porte que utilizam múltiplos controladores de domínio Microsoft Active Directory. Ele coleta eventos de autenticação de segurança (AD Security Logs) e encaminha os registros de identidade para os gateways da Check Point com baixíssimo consumo de recursos.",
+    "source": "Daypo CCSA R82 Test #4 (Q4)"
+  },
+  {
+    "id": 213,
+    "question": "What is the first step in deploying Identity Awareness?",
+    "options": [
+      "Publish Session Changes",
+      "Configure Identity Sources",
+      "Enable Identity Awareness",
+      "Install Security Policy"
+    ],
+    "correct": 2,
+    "category": "Module 7: Identity Awareness",
+    "explanation": "O primeiro passo para implementar Identity Awareness no SmartConsole é habilitar a Software Blade de Identity Awareness nas propriedades do Security Gateway desejado através do seu assistente de configuração (Wizard).",
+    "source": "Daypo CCSA R82 Test #4 (Q6)"
+  },
+  {
+    "id": 214,
+    "question": "You are configuring the security policy for a medium-sized organization that requires different inspection rules for DMZ servers, internal users, and guest Wi-Fi traffic. The standard single-layer policy is becoming difficult to manage due to rule count and complexity. Your manager asks you to explain how policy layers can improve this situation and what you would recommend. Which of the following best describes the benefits of using Ordered Layers in Check Point policy management and how traffic inspection flows through them?",
+    "options": [
+      "Ordered Layers allow you to organize rules by function or business unit, and traffic is inspected sequentially through each layer in top-to-bottom order. Traffic must be accepted by each ordered layer; if a Drop action matches in any layer, processing stops immediately.",
+      "Ordered Layers enable modular policy design where each layer contains specialized rules, and all layers are evaluated in parallel for each packet to maximize security coverage regardless of order.",
+      "Ordered Layers separate policies by security domain, and traffic must pass through all layers sequentially. If traffic is blocked in an early layer, it automatically bypasses remaining layers to improve performance.",
+      "Ordered Layers are primarily used for administrator role separation and do not affect traffic inspection flow; they only control which administrators can edit specific policy sections.",
+      "Ordered Layers allow conditional inspection where rules in different layers apply based on the time of day or administrator preference, enabling flexible policy application without changing rule order."
+    ],
+    "correct": 0,
+    "category": "Module 5: Policy Layers",
+    "explanation": "Em Ordered Layers, a avaliação é sequencial de camada em camada. O tráfego precisa ser explicitamente aprovado ('Accept') em todas as camadas ordenadas para passar. Se der match em uma regra com ação 'Drop' em qualquer camada, a conexão é bloqueada imediatamente (ação terminativa) e as camadas subsequentes não são avaliadas.",
+    "source": "Daypo CCSA R82 Test #4 (Q16)"
+  },
+  {
+    "id": 215,
+    "question": "You are a Check Point administrator responsible for managing a medium-sized enterprise network. Your organization recently implemented Check Point Quantum Security with the Three-Tier Architecture. You need to ensure that security policies are centrally managed, and that multiple security gateways deployed across different locations can enforce consistent security rules. A colleague asks you to explain which component is responsible for storing and managing the security policies that will be enforced across all gateways. Which component of the Check Point Three-Tier Architecture is responsible for this task?",
+    "options": [
+      "Security Management Server (SMS), which centralizes policy management and distribution to all Security Gateways",
+      "Security Gateway, which stores policies locally and communicates directly with SmartConsole for updates",
+      "SmartConsole, which maintains the master copy of all policies in a distributed database across multiple servers",
+      "Gaia Portal, which acts as the central policy repository and coordinates enforcement across all network segments"
+    ],
+    "correct": 0,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "O Security Management Server (SMS) é o componente central que unifica e centraliza o gerenciamento de políticas e objetos de segurança em organizações com múltiplos sites e filiais.",
+    "source": "Daypo CCSA R82 Test #4 (Q24)"
+  },
+  {
+    "id": 216,
+    "question": "Your organization has multiple security administrators working simultaneously on security policy updates. Administrator A is modifying access control rules while Administrator B is trying to install a modified policy to the production gateways. However, Administrator B notices that the policy installation is being delayed because Administrator A's changes have not yet been completed. Which administrator account management feature is essential for handling this concurrent administration scenario and preventing policy conflicts?",
+    "options": [
+      "Session management and concurrent administration controls that prevent simultaneous policy modifications and coordinate installations",
+      "Role-Based Access Control (RBAC) profiles that automatically serialize all policy changes to occur sequentially",
+      "Administrator authentication tokens that lock the policy database during any modification, preventing all other administrators from accessing SmartConsole",
+      "Gaia CLI commands that force all policy changes to bypass SmartConsole and be written directly to the Security Gateway"
+    ],
+    "correct": 0,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "O controle de sessões e a administração concorrente no SmartConsole permitem que múltiplos administradores trabalhem de forma segura e simultânea, isolando suas alterações em sessões privadas até o momento do 'Publish'.",
+    "source": "Daypo CCSA R82 Test #5 (Q2)"
+  },
+  {
+    "id": 217,
+    "question": "You are configuring security policies for your organization's network. You need to create a rule that controls traffic from a specific department's subnet to a web server. To build this rule, you must select the source and destination for the rule. You realize that you need to create or locate objects representing both the department's subnet and the web server before you can complete the rule. Which types of SmartConsole Objects do you need to work with to build this security policy rule?",
+    "options": [
+      "Logical objects such as Network Objects for the subnet and Host objects for the web server",
+      "Physical objects representing the actual network devices and servers that will enforce the rule",
+      "Gateway objects that define the security gateways and their interfaces for traffic inspection",
+      "Service objects only, since the source and destination are automatically derived from the service definition"
+    ],
+    "correct": 0,
+    "category": "Module 3: Object Management",
+    "explanation": "No SmartConsole, sub-redes e servidores individuais são modelados respectivamente através de Network Objects (objeto do tipo 'Network') e Host Objects (objeto do tipo 'Host').",
+    "source": "Daypo CCSA R82 Test #5 (Q11)"
+  },
+  {
+    "id": 218,
+    "question": "Primary log types are ________.",
+    "options": [
+      "Access Logs and Audit Logs",
+      "Security Logs and compliance Logs",
+      "Security Logs and Audit Logs",
+      "Security Logs and Threat Prevention Logs"
+    ],
+    "correct": 2,
+    "category": "Module 6: Security Operations Monitoring",
+    "explanation": "Os dois principais tipos de logs gerados e analisados no ecossistema Check Point são os Security Logs (registros de tráfego de rede e eventos de segurança inspecionados pelos gateways) e os Audit Logs (registros de ações administrativas executadas pelos operadores no SmartConsole e Gaia).",
+    "source": "Daypo CCSA R82 Test #5 (Q13)"
+  },
+  {
+    "id": 219,
+    "question": "What condition needs to be matched for an Inline Layer to be used?",
+    "options": [
+      "The Inline Layer Software blade must be enabled first",
+      "A Dynamic Layer must be added before the Inline Layer and then the policy should be installed.",
+      "The Inline Layer must be installed after the Ordered Layer.",
+      "A parent rule is matched"
+    ],
+    "correct": 3,
+    "category": "Module 5: Policy Layers",
+    "explanation": "Uma Inline Layer somente é acionada e avaliada quando um pacote de tráfego dá 'match' na regra pai (Parent Rule) cuja ação foi configurada para apontar para a respectiva subcamada inline.",
+    "source": "Daypo CCSA R82 Test #5 (Q15)"
+  },
+  {
+    "id": 220,
+    "question": "You have been asked to implement a new security requirement where certain traffic must pass through multiple inspection layers before being allowed or denied. Your organization wants to use ordered policy layers to separate different categories of rules (e.g., an anti-malware layer, a data leakage prevention layer, and a general access control layer). You need to understand how traffic flows through these multiple layers to ensure rules are processed in the correct sequence. How does Check Point's ordered policy layer concept affect the inspection and processing of network traffic?",
+    "options": [
+      "Traffic is inspected sequentially through each ordered layer in the defined order; if any layer denies the traffic, it is dropped immediately, and subsequent layers are not evaluated",
+      "All ordered layers are evaluated simultaneously in parallel; the final decision is determined by whichever layer responds first",
+      "Ordered layers function as fallback mechanisms; only if the first layer contains no matching rules does traffic proceed to the next layer",
+      "Each ordered layer operates independently with no interaction; the administrator must manually define how results from one layer affect processing in another layer"
+    ],
+    "correct": 0,
+    "category": "Module 5: Policy Layers",
+    "explanation": "Nas Ordered Layers, o tráfego é inspecionado sequencialmente de camada em camada. O pacote precisa ser explicitamente aceito em cada camada ordenada sucessiva para que a conexão seja efetivamente liberada ao destino.",
+    "source": "Daypo CCSA R82 Test #5 (Q19)"
+  },
+  {
+    "id": 221,
+    "question": "Your organization operates a dedicated Log Server separate from the Security Management Server. Security analysts need to review logs from multiple Security Gateways to investigate a suspected security incident. The analysts want to use predefined queries to quickly filter logs by criteria such as source IP, destination port, and action taken, rather than reviewing all logs manually. Which monitoring feature and capability allows security analysts to efficiently retrieve and analyze logs matching specific criteria?",
+    "options": [
+      "SmartLog or SmartEvent with predefined and custom query filters to search and analyze logs based on specific criteria",
+      "Gaia CLI commands executed on the Log Server to directly query the underlying database without using SmartConsole",
+      "Monitoring Blade, which automatically categorizes all logs and displays only those matching the current security threat level",
+      "Policy Layers view, which provides built-in log filtering based on the layer structure defined in the security policy"
+    ],
+    "correct": 0,
+    "category": "Module 6: Security Operations Monitoring",
+    "explanation": "O SmartLog e o SmartEvent são as ferramentas integradas ao SmartConsole que realizam consultas e buscas indexadas de alta velocidade em servidores de logs dedicados através de filtros pré-definidos e customizados.",
+    "source": "Daypo CCSA R82 Test #5 (Q27)"
+  },
+  {
+    "id": 222,
+    "question": "You are implementing Identity Awareness for your organization, which will enhance security policies by incorporating user and computer identity information. As part of this implementation, you need to configure how user identities will be collected from your Active Directory environment and then used to enforce identity-based rules. You must establish the mechanism that will gather user identity information and make it available to the Security Gateway. Which component of the Identity Awareness solution is responsible for collecting user and computer identity information from identity sources such as Active Directory?",
+    "options": [
+      "Identity Collector, which connects to identity sources and retrieves user and computer identity information for use in security policies",
+      "User Access Roles, which directly query identity sources and cache identity information on the Security Gateway",
+      "Identity Policy Layer, which automatically discovers all users and computers on the network without requiring external data sources",
+      "SmartEvent Identity Module, which monitors identity authentication events and dynamically updates security policy rules"
+    ],
+    "correct": 0,
+    "category": "Module 7: Identity Awareness",
+    "explanation": "O Identity Collector é o componente dedicado da Check Point que se conecta às fontes de identidade (como servidores Microsoft Active Directory e Cisco ISE) para extrair mapeamentos de usuários e computadores para endereços IP e repassá-los aos gateways.",
+    "source": "Daypo CCSA R82 Test #6 (Q5)"
+  },
+  {
+    "id": 223,
+    "question": "Which statement best describes Trusted Clients?",
+    "options": [
+      "These are trusted administrators allowed to connect to the Security Management Server using SmartConsole",
+      "These are specific devices or IP addresses allowed to connect to the Security Management Server using SmartConsole",
+      "These are Security Gateways allowed to connect to the Security Management Server using SmartConsole",
+      "These are trusted users allowed to connect to the Security Management Server using SmartConsole"
+    ],
+    "correct": 1,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "Os 'Trusted Clients' configurados no Security Management Server definem quais endereços IP específicos, faixas ou computadores têm autorização de rede para se conectar ao SMS através do SmartConsole.",
+    "source": "Daypo CCSA R82 Test #6 (Q8)"
+  },
+  {
+    "id": 224,
+    "question": "When is a new Revision created?",
+    "options": [
+      "by executing 'set revision' command",
+      "during database installation",
+      "during publish",
+      "during installation"
+    ],
+    "correct": 2,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "No Check Point R82, uma nova Revisão de banco de dados (Revision) é gerada automaticamente no momento em que um administrador clica no botão 'Publish', consolidando as alterações da sua sessão privada na base do SMS.",
+    "source": "Daypo CCSA R82 Test #6 (Q10)"
+  },
+  {
+    "id": 225,
+    "question": "What shells are offered by the Gaia Operating Systems?",
+    "options": [
+      "Gaia Clish and C-Shell",
+      "Command Line and CLISH",
+      "C-Shell, -Shell and Bourne Shell (bsh)",
+      "Gaia Clish and Expert Mode"
+    ],
+    "correct": 3,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "O sistema operacional Gaia oferece dois ambientes de linha de comando: o Gaia Clish (shell padrão baseada em comandos configurados e controle de acesso RBAC) e o Expert Mode (shell Linux Bash nativa com privilégios de root para diagnóstico avançado).",
+    "source": "Daypo CCSA R82 Test #6 (Q17)"
+  },
+  {
+    "id": 226,
+    "question": "How should you exit Expert Mode?",
+    "options": [
+      "by typing the 'bye' command",
+      "By pressing the and CTRL Keys",
+      "by typing the 'quit' command",
+      "by typing the 'exit' command"
+    ],
+    "correct": 3,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "Para sair do modo Expert Mode e retornar com segurança ao Gaia Clish, o comando correto a ser digitado é 'exit'.",
+    "source": "Daypo CCSA R82 Test #6 (Q19)"
+  },
+  {
+    "id": 227,
+    "question": "Your organization wants to implement granular control over web-based applications and restrict certain websites from being accessed by internal users. You need to create security rules that can identify specific applications (such as Slack, Microsoft Teams, YouTube) and control access to them, as well as rules that block access to certain URL categories (such as social media or gambling sites). What combination of features and objects would you use to achieve both application-level and URL-level control in your security policies?",
+    "options": [
+      "Application Control objects to identify and control specific applications, and URL Filtering with custom URL lists and URL categories to control website access",
+      "Service objects configured with protocol and port definitions to identify applications, and DNS query logs to filter URLs",
+      "Identity Access Roles combined with Threat Prevention signatures to detect and block application traffic",
+      "Policy Layers configured with application-specific rules, and HTTPS Inspection to decrypt and analyze application content"
+    ],
+    "correct": 0,
+    "category": "Module 9: Application Control and URL Filtering",
+    "explanation": "O Application Control é utilizado para identificar e controlar aplicações web específicas com base em comportamento e assinaturas (independentemente de portas), enquanto o URL Filtering categoriza e filtra o tráfego web com base em URLs, domínios e categorias de conteúdo.",
+    "source": "Daypo CCSA R82 Test #6 (Q21)"
+  },
+  {
+    "id": 228,
+    "question": "What is the main benefit of Identity Awareness?",
+    "options": [
+      "It allows you to configure security policy based on the source or destination network and user agent.",
+      "It allows you to configure security policy based user or machine identity.",
+      "It allows you to configure security policy based on password length. RADIUS group membership and the source operating system.",
+      "It allows you to configure security policy based on source network, destination network. LDAP Group membership and source operating system."
+    ],
+    "correct": 1,
+    "category": "Module 7: Identity Awareness",
+    "explanation": "O principal benefício do Identity Awareness é permitir que as políticas de segurança sejam definidas com base na identidade de usuários e computadores (Access Roles), e não apenas em endereços IP estáticos.",
+    "source": "Daypo CCSA R82 Test #6 (Q26)"
+  },
+  {
+    "id": 229,
+    "question": "With URL Filtering you can:",
+    "options": [
+      "Control employee application access",
+      "Control employee Internet access to inappropriate and illicit websites",
+      "Control employee intranet access to internal web sites",
+      "Control employee file access"
+    ],
+    "correct": 1,
+    "category": "Module 9: Application Control and URL Filtering",
+    "explanation": "A Software Blade de URL Filtering permite controlar e bloquear o acesso de colaboradores da empresa a sites ilícitos, perigosos, não relacionados aos negócios ou inapropriados, com base em milhões de URLs categorizadas na nuvem ThreatCloud.",
+    "source": "Daypo CCSA R82 Test #6 (Q34)"
+  },
+  {
+    "id": 230,
+    "question": "You are a junior security administrator configuring a new Check Point R82 environment. Your manager has asked you to deploy a security policy that controls web traffic for different departments. Before you begin, you need to understand how the security policy will be processed by the Security Gateway. When a packet arrives at the Security Gateway, which of the following best describes how it flows through the Check Point Three-Tier Architecture's policy inspection process?",
+    "options": [
+      "The packet is first inspected by the SmartConsole, which determines the action, then forwarded to the Security Gateway for enforcement.",
+      "The packet is received by the Security Gateway, evaluated against the installed security policy rules in order, and an action (allow, drop, reject) is applied based on the first matching rule.",
+      "The packet is sent directly to the Security Management Server for rule matching, then the SMS sends the result back to the Gateway for implementation.",
+      "The packet bypasses the Security Gateway initially and is first logged by the Log Server before being evaluated by the SMS.",
+      "The packet is evaluated by multiple gateways in parallel, and the most restrictive rule from all gateways is applied."
+    ],
+    "correct": 1,
+    "category": "Module 4: Security Policy Management",
+    "explanation": "No fluxo de inspeção de tráfego do Check Point: o pacote de dados é recebido pelo Security Gateway, avaliado sequencialmente contra as regras instaladas da política de cima para baixo, e a ação correspondente (Accept, Drop ou Reject) da primeira regra com match é aplicada.",
+    "source": "Daypo CCSA R82 Test #7 (Q5)"
+  },
+  {
+    "id": 231,
+    "question": "What are the valid types of Administrator Accounts?",
+    "options": [
+      "Gaia account, Operating system account, SmartConsole account",
+      "System account, Security Management Server account, SmartConsole account",
+      "Gaia account, Security Management Server account, SmartConsole account",
+      "Expert account, Security Management Server account, SmartConsole account"
+    ],
+    "correct": 2,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "No ecossistema Check Point, os tipos de contas de administração compreendem: contas do sistema operacional Gaia (Gaia account), contas do Security Management Server e contas de administradores do SmartConsole.",
+    "source": "Daypo CCSA R82 Test #7 (Q6)"
+  },
+  {
+    "id": 232,
+    "question": "You are managing administrator access to the Check Point SMS for a team of three security administrators who work on different shifts. One administrator, Alice, has been working for the past 3 hours, and now Bob needs to work on urgent policy changes. However, SmartConsole is showing that Alice's session is still active. You need to allow Bob to access the management station and make critical policy changes without losing Alice's current work or forcing her to reconnect. Which of the following administrator account management features should you use to accomplish this?",
+    "options": [
+      "Create a new administrator profile for Bob with Read-Only permissions and have him log in to a different management console.",
+      "Immediately log off Alice's session and have Bob log in with his own administrator account to proceed with policy changes.",
+      "Use the concurrent administration feature to allow both Alice and Bob to work simultaneously with their own administrator accounts and sessions.",
+      "Downgrade Alice's administrator profile to Guest level and promote Bob to Super Administrator so he can make changes.",
+      "Take over Alice's session using the session takeover function and complete all policy changes under her account credentials."
+    ],
+    "correct": 2,
+    "category": "Module 2: Administrator Account Management",
+    "explanation": "O recurso de Administração Concorrente (Concurrent Administration) permite que múltiplos administradores acessem o Security Management Server simultaneamente no SmartConsole, trabalhando em sessões privadas e independentes sem risco de sobrescrita acidental de configurações.",
+    "source": "Daypo CCSA R82 Test #7 (Q13)"
+  },
+  {
+    "id": 233,
+    "question": "You are configuring a new Check Point R82 security environment and need to explain the architecture to your team. Your organization requires centralized management of security policies across multiple gateways, but wants to understand how the components interact. You need to describe the role of each component in the Three-Tier Architecture and how they work together. Which statement correctly describes the relationship between the Security Management Server (SMS), Security Gateway, and SmartConsole in the Check Point Three-Tier Architecture?",
+    "options": [
+      "The Security Management Server stores and manages security policies, the Security Gateway enforces those policies on network traffic, and SmartConsole is the administrative interface used to manage policies and objects on the SMS",
+      "The Security Gateway is the centralized management point, SmartConsole runs on the SMS to process rules, and the Security Management Server is deployed at each network segment to enforce policies",
+      "SmartConsole directly communicates with and manages each individual Security Gateway, bypassing the SMS entirely, allowing real-time rule modifications without policy installation",
+      "The Security Management Server collects logs from gateways, SmartConsole is installed on each gateway for local policy management, and the Three-Tier Architecture eliminates the need for a separate management interface",
+      "The Security Gateway acts as a redundant management server, SmartConsole is used only for viewing logs, and the SMS is optional for organizations with a single gateway deployment"
+    ],
+    "correct": 0,
+    "category": "Module 1: Introduction to Quantum Security",
+    "explanation": "Na Arquitetura Three-Tier da Check Point: o Security Management Server (SMS) armazena e gerencia as políticas e objetos; o Security Gateway impõe essas regras diretamente no tráfego de rede; e o SmartConsole atua como a interface administrativa gráfica utilizada pelos operadores.",
+    "source": "Daypo CCSA R82 Test #7 (Q29)"
+  }
+];
+
         // Current Application State
-        let currentMode = 'study'; // 'study', 'exam', 'bullets'
+        let currentMode = 'study'; // 'study', 'study2', 'exam', 'bullets'
         let currentFilter = 'all'; // 'all', 'unanswered', 'flagged', 'wrong'
         let selectedModule = 'all';
 
-        // Study Mode State (All 191 questions)
+        // Study Mode State (191 questions from Brave-Dumps)
         let studyCurrentIndex = 0;
-        let studyAnswers = {}; // q.id -> original option index (0..3)
-        let studyFlags = {};   // q.id -> boolean
-        let studyOrder = [];   // indices into BRAVE_QUESTIONS
+        let studyAnswers = {};
+        let studyFlags = {};
+        let studyOrder = [];
         let studyShuffled = false;
         let studyShuffleOptions = false;
-        let studyOptionOrders = {}; // q.id -> [shuffled option indices]
+        let studyOptionOrders = {};
 
-        // Exam Mode State (100 random questions)
-        let examPool = []; // array of 100 question objects
+        // Study V2 Mode State (42 scenario questions from Daypo)
+        let study2CurrentIndex = 0;
+        let study2Answers = {};
+        let study2Flags = {};
+        let study2Order = [];
+        let study2Shuffled = false;
+        let study2ShuffleOptions = false;
+        let study2OptionOrders = {};
+
+        // Exam Mode State (100 random questions from Brave-Dumps)
+        let examPool = [];
         let examCurrentIndex = 0;
         let examAnswers = {};
         let examFlags = {};
         let examOrder = [];
         let examShuffleOptions = false;
         let examOptionOrders = {};
-        let examTimerSeconds = 120 * 60; // 120 min
+        let examTimerSeconds = 120 * 60;
         let examTimerInterval = null;
         let examSubmitted = false;
 
-        // Bullets Mode State (10 random questions)
-        let bulletsPool = []; // array of 10 question objects
+        // Bullets Mode State (10 random questions from Brave-Dumps)
+        let bulletsPool = [];
         let bulletsCurrentIndex = 0;
         let bulletsAnswers = {};
         let bulletsFlags = {};
@@ -4130,8 +4742,10 @@
 
         // DOM Elements
         const btnStudyMode = document.getElementById('btnStudyMode');
+        const btnStudyV2Mode = document.getElementById('btnStudyV2Mode');
         const btnExamMode = document.getElementById('btnExamMode');
         const btnBulletsMode = document.getElementById('btnBulletsMode');
+
         const timerDisplay = document.getElementById('timerDisplay');
         const timerText = document.getElementById('timerText');
 
@@ -4158,51 +4772,58 @@
         const nextBtn = document.getElementById('nextBtn');
         const clearSelectionBtn = document.getElementById('clearSelectionBtn');
 
-        const mapTitleText = document.getElementById('mapTitleText');
-        const mapTotalPill = document.getElementById('mapTotalPill');
-        const moduleFilterWrapper = document.getElementById('moduleFilterWrapper');
-        const moduleFilterSelect = document.getElementById('moduleFilterSelect');
         const questionsGrid = document.getElementById('questionsGrid');
+        const mobileQuestionsGrid = document.getElementById('mobileQuestionsGrid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const mobileFilterButtons = document.querySelectorAll('.mobile-filter-btn');
+
+        const moduleFilterWrapper = document.getElementById('moduleFilterWrapper');
+        const mobileModuleFilterWrapper = document.getElementById('mobileModuleFilterWrapper');
+        const moduleFilterSelect = document.getElementById('moduleFilterSelect');
+        const mobileModuleFilterSelect = document.getElementById('mobileModuleFilterSelect');
+
+        const mapTitleText = document.getElementById('mapTitleText');
+        const mobileGridTitle = document.getElementById('mobileGridTitle');
+        const mapTotalPill = document.getElementById('mapTotalPill');
 
         const finishExamBtn = document.getElementById('finishExamBtn');
         const newExamBtn = document.getElementById('newExamBtn');
         const newBulletsBtn = document.getElementById('newBulletsBtn');
         const finishBulletsBtn = document.getElementById('finishBulletsBtn');
 
+        const mobileFinishExamBtn = document.getElementById('mobileFinishExamBtn');
+        const mobileNewBulletsBtn = document.getElementById('mobileNewBulletsBtn');
+
+        // Score Modal Elements
         const scoreModal = document.getElementById('scoreModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalPercentage = document.getElementById('modalPercentage');
-        const modalStatusText = document.getElementById('modalStatusText');
-        const modalEmoji = document.getElementById('modalEmoji');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modalRestartBtn = document.getElementById('modalRestartBtn');
+        const modalReviewBtn = document.getElementById('modalReviewBtn');
+        const modalScorePercent = document.getElementById('modalScorePercent');
+        const modalScoreStatus = document.getElementById('modalScoreStatus');
+        const modalScorePill = document.getElementById('modalScorePill');
+        const modalTimeTaken = document.getElementById('modalTimeTaken');
         const modalCorrect = document.getElementById('modalCorrect');
         const modalWrong = document.getElementById('modalWrong');
         const modalUnanswered = document.getElementById('modalUnanswered');
         const modalMessage = document.getElementById('modalMessage');
         const modalModuleBreakdown = document.getElementById('modalModuleBreakdown');
-        const moduleBreakdownList = document.getElementById('moduleBreakdownList');
-        const modalReviewBtn = document.getElementById('modalReviewBtn');
-        const modalRestartBtn = document.getElementById('modalRestartBtn');
-        const closeModalBtn = document.getElementById('closeModalBtn');
 
+        // Reset Modal Elements
         const resetModal = document.getElementById('resetModal');
         const cancelResetBtn = document.getElementById('cancelResetBtn');
         const confirmResetBtn = document.getElementById('confirmResetBtn');
 
-        // Mobile Grid Modal Elements
-        const mobileGridModal = document.getElementById('mobileGridModal');
+        // Mobile Grid Drawer Elements
         const mobileGridBtnTop = document.getElementById('mobileGridBtnTop');
         const mobileGridBtnBottom = document.getElementById('mobileGridBtnBottom');
+        const mobileGridModal = document.getElementById('mobileGridModal');
         const closeMobileGridBtn = document.getElementById('closeMobileGridBtn');
-        const mobileQuestionsGrid = document.getElementById('mobileQuestionsGrid');
-        const mobileModuleFilterWrapper = document.getElementById('mobileModuleFilterWrapper');
-        const mobileModuleFilterSelect = document.getElementById('mobileModuleFilterSelect');
-        const mobileGridTitle = document.getElementById('mobileGridTitle');
-        const mobileFinishExamBtn = document.getElementById('mobileFinishExamBtn');
-        const mobileNewBulletsBtn = document.getElementById('mobileNewBulletsBtn');
 
-        // Helper: Active Pool & State Selectors
+        // Active Pool & State Helpers
         function getActivePool() {
             if (currentMode === 'study') return BRAVE_QUESTIONS;
+            if (currentMode === 'study2') return DAYPO_QUESTIONS;
             if (currentMode === 'exam') return examPool;
             if (currentMode === 'bullets') return bulletsPool;
             return BRAVE_QUESTIONS;
@@ -4210,6 +4831,7 @@
 
         function getActiveOrder() {
             if (currentMode === 'study') return studyOrder;
+            if (currentMode === 'study2') return study2Order;
             if (currentMode === 'exam') return examOrder;
             if (currentMode === 'bullets') return bulletsOrder;
             return studyOrder;
@@ -4217,6 +4839,7 @@
 
         function getActiveAnswers() {
             if (currentMode === 'study') return studyAnswers;
+            if (currentMode === 'study2') return study2Answers;
             if (currentMode === 'exam') return examAnswers;
             if (currentMode === 'bullets') return bulletsAnswers;
             return studyAnswers;
@@ -4224,6 +4847,7 @@
 
         function getActiveFlags() {
             if (currentMode === 'study') return studyFlags;
+            if (currentMode === 'study2') return study2Flags;
             if (currentMode === 'exam') return examFlags;
             if (currentMode === 'bullets') return bulletsFlags;
             return studyFlags;
@@ -4231,6 +4855,7 @@
 
         function getActiveIndex() {
             if (currentMode === 'study') return studyCurrentIndex;
+            if (currentMode === 'study2') return study2CurrentIndex;
             if (currentMode === 'exam') return examCurrentIndex;
             if (currentMode === 'bullets') return bulletsCurrentIndex;
             return 0;
@@ -4238,12 +4863,14 @@
 
         function setActiveIndex(idx) {
             if (currentMode === 'study') studyCurrentIndex = idx;
+            else if (currentMode === 'study2') study2CurrentIndex = idx;
             else if (currentMode === 'exam') examCurrentIndex = idx;
             else if (currentMode === 'bullets') bulletsCurrentIndex = idx;
         }
 
         function getActiveShuffleOptions() {
             if (currentMode === 'study') return studyShuffleOptions;
+            if (currentMode === 'study2') return study2ShuffleOptions;
             if (currentMode === 'exam') return examShuffleOptions;
             if (currentMode === 'bullets') return bulletsShuffleOptions;
             return false;
@@ -4251,6 +4878,7 @@
 
         function getActiveOptionOrders() {
             if (currentMode === 'study') return studyOptionOrders;
+            if (currentMode === 'study2') return study2OptionOrders;
             if (currentMode === 'exam') return examOptionOrders;
             if (currentMode === 'bullets') return bulletsOptionOrders;
             return studyOptionOrders;
@@ -4266,20 +4894,22 @@
             return copy;
         }
 
-        // Initialize Option Orders for Question
+        // Initialize Option Orders for Question (handles 4 or 5 options dynamically)
         function getQuestionOptionOrder(q) {
             const shouldShuffle = getActiveShuffleOptions();
             const optionOrders = getActiveOptionOrders();
+            const len = (q && q.options) ? q.options.length : 4;
+            const defaultOrder = Array.from({ length: len }, (_, i) => i);
             if (!shouldShuffle) {
-                return [0, 1, 2, 3];
+                return defaultOrder;
             }
-            if (!optionOrders[q.id]) {
-                optionOrders[q.id] = shuffleArray([0, 1, 2, 3]);
+            if (!optionOrders[q.id] || optionOrders[q.id].length !== len) {
+                optionOrders[q.id] = shuffleArray([...defaultOrder]);
             }
             return optionOrders[q.id];
         }
 
-        // Build Study Mode Initial Order
+        // Build Study Mode Initial Order (Brave-Dumps 191)
         function initStudyOrder() {
             studyOrder = [];
             for (let i = 0; i < BRAVE_QUESTIONS.length; i++) {
@@ -4288,7 +4918,16 @@
             studyCurrentIndex = 0;
         }
 
-        // Build Exam Mode Pool (100 random questions)
+        // Build Study V2 Mode Initial Order (Daypo 42)
+        function initStudy2Order() {
+            study2Order = [];
+            for (let i = 0; i < DAYPO_QUESTIONS.length; i++) {
+                study2Order.push(i);
+            }
+            study2CurrentIndex = 0;
+        }
+
+        // Build Exam Mode Pool (100 random questions from Brave-Dumps)
         function initExamMode(forceNew = false) {
             if (forceNew || examPool.length !== 100) {
                 const shuffledIndices = shuffleArray(BRAVE_QUESTIONS.map((_, i) => i));
@@ -4304,7 +4943,7 @@
             startExamTimer();
         }
 
-        // Build Bullets Mode Pool (10 random questions)
+        // Build Bullets Mode Pool (10 random questions from Brave-Dumps)
         function initBulletsMode(forceNew = false) {
             if (forceNew || bulletsPool.length !== 10) {
                 const shuffledIndices = shuffleArray(BRAVE_QUESTIONS.map((_, i) => i));
@@ -4321,15 +4960,14 @@
         // Exam Timer Management
         function startExamTimer() {
             clearInterval(examTimerInterval);
-            if (currentMode !== 'exam' || examSubmitted) return;
+            if (examSubmitted) return;
 
-            timerDisplay.classList.add('visible');
             updateTimerDisplay();
-
             examTimerInterval = setInterval(() => {
                 if (examTimerSeconds > 0) {
                     examTimerSeconds--;
                     updateTimerDisplay();
+                    if (examTimerSeconds % 10 === 0) saveState();
                 } else {
                     clearInterval(examTimerInterval);
                     finishExam(true);
@@ -4338,17 +4976,25 @@
         }
 
         function updateTimerDisplay() {
-            const mins = Math.floor(examTimerSeconds / 60);
-            const secs = examTimerSeconds % 60;
-            timerText.textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+            const minutes = Math.floor(examTimerSeconds / 60);
+            const seconds = examTimerSeconds % 60;
+            timerText.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            if (examTimerSeconds < 300) {
+                timerDisplay.style.borderColor = 'var(--wine-border)';
+                timerDisplay.style.color = 'var(--wine)';
+            } else {
+                timerDisplay.style.borderColor = 'var(--border)';
+                timerDisplay.style.color = 'var(--text-secondary)';
+            }
         }
 
-        // Switch Modes
+        // Mode Switching
         function switchMode(newMode, force = false) {
             if (!force && currentMode === newMode) return;
             currentMode = newMode;
 
             btnStudyMode.classList.toggle('active', currentMode === 'study');
+            btnStudyV2Mode.classList.toggle('active', currentMode === 'study2');
             btnExamMode.classList.toggle('active', currentMode === 'exam');
             btnBulletsMode.classList.toggle('active', currentMode === 'bullets');
 
@@ -4362,13 +5008,13 @@
             }
 
             // Aside & Modal actions visibility
-            const isStudy = currentMode === 'study';
+            const isStudyLike = (currentMode === 'study' || currentMode === 'study2');
             const isExamActive = (currentMode === 'exam' && !examSubmitted);
             const isExamDone = (currentMode === 'exam' && examSubmitted);
             const isBullets = (currentMode === 'bullets');
 
-            moduleFilterWrapper.style.display = isStudy ? 'block' : 'none';
-            mobileModuleFilterWrapper.style.display = isStudy ? 'block' : 'none';
+            moduleFilterWrapper.style.display = isStudyLike ? 'block' : 'none';
+            mobileModuleFilterWrapper.style.display = isStudyLike ? 'block' : 'none';
 
             finishExamBtn.style.display = isExamActive ? 'block' : 'none';
             newExamBtn.style.display = isExamDone ? 'block' : 'none';
@@ -4381,20 +5027,27 @@
             // Title & Counts
             if (currentMode === 'study') {
                 mapTitleText.textContent = 'Mapa Oficial R82';
-                mobileGridTitle.textContent = 'Mapa Oficial (191)';
+                mobileGridTitle.textContent = `Mapa Oficial (${studyOrder.length})`;
                 mapTotalPill.textContent = studyOrder.length.toString();
+                shuffleQuestionsBtn.classList.toggle('active', studyShuffled);
+                shuffleOptsBtn.classList.toggle('active', studyShuffleOptions);
+            } else if (currentMode === 'study2') {
+                mapTitleText.textContent = 'Cenários Daypo R82';
+                mobileGridTitle.textContent = `Cenários Daypo (${study2Order.length})`;
+                mapTotalPill.textContent = study2Order.length.toString();
+                shuffleQuestionsBtn.classList.toggle('active', study2Shuffled);
+                shuffleOptsBtn.classList.toggle('active', study2ShuffleOptions);
             } else if (currentMode === 'exam') {
                 mapTitleText.textContent = 'Simulado Exame';
                 mobileGridTitle.textContent = 'Simulado Exame (100)';
                 mapTotalPill.textContent = '100';
+                shuffleOptsBtn.classList.toggle('active', examShuffleOptions);
             } else if (currentMode === 'bullets') {
-                mapTitleText.textContent = 'Treino 10 Bullets';
-                mobileGridTitle.textContent = 'Treino 10 Bullets';
+                mapTitleText.textContent = 'Bullets 10 Qs';
+                mobileGridTitle.textContent = 'Bullets (10)';
                 mapTotalPill.textContent = '10';
+                shuffleOptsBtn.classList.toggle('active', bulletsShuffleOptions);
             }
-
-            // Sync Option Shuffle button visual state
-            shuffleOptsBtn.classList.toggle('active-toggle', getActiveShuffleOptions());
 
             renderQuestion();
             renderGrid();
@@ -4409,6 +5062,7 @@
 
             if (!order || order.length === 0) {
                 if (currentMode === 'study') initStudyOrder();
+                else if (currentMode === 'study2') initStudy2Order();
                 else if (currentMode === 'exam') initExamMode(true);
                 else if (currentMode === 'bullets') initBulletsMode(true);
                 order = getActiveOrder();
@@ -4446,7 +5100,7 @@
             // Render Options
             optionsList.innerHTML = '';
             const optionOrder = getQuestionOptionOrder(q);
-            const letters = ['A', 'B', 'C', 'D'];
+            const letters = ['A', 'B', 'C', 'D', 'E'];
 
             optionOrder.forEach((originalOptIdx, displayIdx) => {
                 const optBtn = document.createElement('button');
@@ -4466,16 +5120,16 @@
 
                 // Option State Styling
                 if (isAnswered) {
-                    const userSelectedOriginal = answers[q.id];
+                    const userSelectedIdx = answers[q.id];
                     if (isExamActive) {
-                        if (originalOptIdx === userSelectedOriginal) {
+                        if (originalOptIdx === userSelectedIdx) {
                             optBtn.classList.add('selected');
                         }
                     } else {
-                        optBtn.classList.add('locked');
+                        // Feedback Mode (Study / Bullets / Exam Reviewed)
                         if (originalOptIdx === q.correct) {
                             optBtn.classList.add('correct');
-                        } else if (originalOptIdx === userSelectedOriginal) {
+                        } else if (originalOptIdx === userSelectedIdx) {
                             optBtn.classList.add('wrong');
                         }
                     }
@@ -4506,7 +5160,7 @@
                 } else if (currentMode === 'bullets') {
                     nextBtn.textContent = 'Ver Desempenho ⚡';
                 } else {
-                    nextBtn.textContent = 'Fim (191) ✓';
+                    nextBtn.textContent = `Fim (${order.length}) ✓`;
                 }
             } else {
                 nextBtn.textContent = 'Próxima →';
@@ -4516,58 +5170,51 @@
             updateTopStats();
         }
 
-        // Handle Selecting an Option
-        function handleOptionSelect(q, selectedOriginalIdx) {
+        // Handle Option Click
+        function handleOptionSelect(q, originalOptIdx) {
             const answers = getActiveAnswers();
             const isExamActive = (currentMode === 'exam' && !examSubmitted);
 
             if (!isExamActive && answers[q.id] !== undefined) {
-                return;
+                return; // locked once answered in study/bullets mode
             }
 
-            answers[q.id] = selectedOriginalIdx;
-
+            answers[q.id] = originalOptIdx;
             renderQuestion();
-            renderGrid();
-            updateTopStats();
             saveState();
         }
 
-        // Clear Selection
         function clearCurrentSelection() {
-            const pool = getActivePool();
             const order = getActiveOrder();
+            const pool = getActivePool();
             const activeIdx = getActiveIndex();
-            if (order.length === 0) return;
-
-            const q = pool[order[activeIdx]];
             const answers = getActiveAnswers();
-            if (answers[q.id] !== undefined) {
-                delete answers[q.id];
-                renderQuestion();
-                renderGrid();
-                updateTopStats();
-                saveState();
-            }
-        }
 
-        // Toggle Flag
-        function toggleFlag() {
-            const pool = getActivePool();
-            const order = getActiveOrder();
-            const activeIdx = getActiveIndex();
             if (order.length === 0) return;
-
             const q = pool[order[activeIdx]];
-            const flags = getActiveFlags();
-            flags[q.id] = !flags[q.id];
+            if (!q) return;
 
+            delete answers[q.id];
             renderQuestion();
-            renderGrid();
             saveState();
         }
 
-        // Render Questions Grid (Both Desktop Aside and Mobile Drawer)
+        function toggleFlag() {
+            const order = getActiveOrder();
+            const pool = getActivePool();
+            const activeIdx = getActiveIndex();
+            const flags = getActiveFlags();
+
+            if (order.length === 0) return;
+            const q = pool[order[activeIdx]];
+            if (!q) return;
+
+            flags[q.id] = !flags[q.id];
+            renderQuestion();
+            saveState();
+        }
+
+        // Render Sidebar and Mobile Grid
         function renderGrid() {
             const pool = getActivePool();
             const order = getActiveOrder();
@@ -4576,7 +5223,6 @@
             const flags = getActiveFlags();
             const isExamActive = (currentMode === 'exam' && !examSubmitted);
 
-            // Populate both grids
             const gridTargets = [questionsGrid, mobileQuestionsGrid];
             gridTargets.forEach(target => {
                 if (!target) return;
@@ -4587,47 +5233,47 @@
                     if (!q) return;
 
                     const isAnswered = answers[q.id] !== undefined;
-                    const isFlagged = !!flags[q.id];
+                    const isFlagged = !flags[q.id];
                     const isCurrent = displayOrderIdx === activeIdx;
 
                     if (currentFilter === 'unanswered' && isAnswered) return;
                     if (currentFilter === 'flagged' && !isFlagged) return;
-                    if (currentFilter === 'wrong') {
-                        if (isExamActive || !isAnswered || answers[q.id] === q.correct) return;
-                    }
+                    if (currentFilter === 'wrong' && (!isAnswered || answers[q.id] === q.correct)) return;
 
-                    const node = document.createElement('div');
-                    node.className = 'grid-item';
-                    node.textContent = displayOrderIdx + 1;
+                    const btn = document.createElement('button');
+                    btn.className = 'grid-item';
+                    btn.textContent = (displayOrderIdx + 1).toString();
 
-                    if (isCurrent) node.classList.add('current');
-                    if (isFlagged) node.classList.add('flagged');
+                    if (isCurrent) btn.classList.add('current');
+                    if (isFlagged) btn.classList.add('flagged');
 
                     if (isAnswered) {
                         if (isExamActive) {
-                            node.classList.add('answered');
+                            btn.classList.add('answered');
                         } else {
                             if (answers[q.id] === q.correct) {
-                                node.classList.add('correct');
+                                btn.classList.add('correct');
                             } else {
-                                node.classList.add('wrong');
+                                btn.classList.add('wrong');
                             }
                         }
                     }
 
-                    node.addEventListener('click', () => {
+                    btn.addEventListener('click', () => {
                         setActiveIndex(displayOrderIdx);
                         renderQuestion();
-                        mobileGridModal.classList.remove('open');
+                        if (target === mobileQuestionsGrid) {
+                            mobileGridModal.classList.remove('open');
+                        }
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     });
 
-                    target.appendChild(node);
+                    target.appendChild(btn);
                 });
             });
         }
 
-        // Update Top Stats
+        // Update Top Bar Statistics
         function updateTopStats() {
             const pool = getActivePool();
             const answers = getActiveAnswers();
@@ -4652,84 +5298,98 @@
             const remaining = order.length - answeredCount;
 
             if (currentMode === 'exam' && !examSubmitted) {
-                statCorrectTop.textContent = answeredCount;
-                statWrongTop.textContent = remaining;
-                statRemainingTop.textContent = `• ${order.length} total`;
-            } else {
-                statCorrectTop.textContent = correctCount;
-                statWrongTop.textContent = wrongCount;
+                statCorrectTop.textContent = `✓ ${answeredCount} resp.`;
+                statWrongTop.textContent = ``;
                 statRemainingTop.textContent = `• ${remaining} restantes`;
+                topScorePill.style.background = 'var(--bg-subtle)';
+            } else {
+                statCorrectTop.textContent = `✓ ${correctCount} certas`;
+                statWrongTop.textContent = `✗ ${wrongCount} erradas`;
+                statRemainingTop.textContent = `• ${remaining} restantes`;
+
+                if (answeredCount > 0) {
+                    const pct = Math.round((correctCount / answeredCount) * 100);
+                    if (pct >= 70) {
+                        topScorePill.style.background = 'var(--olive-surface)';
+                    } else {
+                        topScorePill.style.background = 'var(--wine-surface)';
+                    }
+                } else {
+                    topScorePill.style.background = 'var(--bg-subtle)';
+                }
             }
         }
 
-        // Finish Exam & Show Results
-        function finishExam(autoExpired = false) {
-            clearInterval(examTimerInterval);
+        // Finish Exam Mode
+        function finishExam(isAuto = false) {
+            if (examSubmitted) return;
             examSubmitted = true;
-            finishExamBtn.style.display = 'none';
-            mobileFinishExamBtn.style.display = 'none';
-            newExamBtn.style.display = 'block';
+            clearInterval(examTimerInterval);
 
-            let correctCount = 0;
-            let wrongCount = 0;
-            let unansweredCount = 0;
-
+            let correct = 0;
+            let wrong = 0;
+            let unanswered = 0;
             const moduleStats = {};
 
-            examPool.forEach(q => {
-                const cat = q.category || "Outros";
-                if (!moduleStats[cat]) moduleStats[cat] = { correct: 0, total: 0 };
-                moduleStats[cat].total++;
+            examOrder.forEach(qPoolIdx => {
+                const q = examPool[qPoolIdx];
+                const mod = q.category || 'Outros';
+                if (!moduleStats[mod]) moduleStats[mod] = { total: 0, correct: 0 };
+                moduleStats[mod].total++;
 
                 if (examAnswers[q.id] === undefined) {
-                    unansweredCount++;
+                    unanswered++;
                 } else if (examAnswers[q.id] === q.correct) {
-                    correctCount++;
-                    moduleStats[cat].correct++;
+                    correct++;
+                    moduleStats[mod].correct++;
                 } else {
-                    wrongCount++;
+                    wrong++;
                 }
             });
 
-            const percentage = Math.round((correctCount / examPool.length) * 100);
-            const passed = percentage >= 70;
+            const pct = Math.round((correct / 100) * 100);
+            const passed = pct >= 70;
 
-            modalTitle.firstElementChild.textContent = autoExpired ? "Tempo Esgotado! Resultado do Exame" : "Resultado do Exame CCSA R82";
-            modalPercentage.textContent = `${percentage}%`;
-            modalPercentage.style.color = passed ? "var(--correct-text)" : "var(--wrong-text)";
+            modalScorePercent.textContent = `${pct}%`;
+            modalScoreStatus.textContent = passed ? "APROVADO" : "REPROVADO";
+            modalScoreStatus.style.color = passed ? "var(--olive)" : "var(--wine)";
 
-            modalStatusText.textContent = passed ? "Aprovado no Exame Oficial!" : "Reprovado (Nota de corte: 70%)";
-            modalStatusText.style.color = passed ? "var(--correct-text)" : "var(--wrong-text)";
-            modalEmoji.textContent = passed ? "🏆" : "📚";
+            modalScorePill.textContent = passed ? "✓ Atingiu a nota mínima (70%)" : "✗ Abaixo da nota mínima (70%)";
+            modalScorePill.style.color = passed ? "var(--olive)" : "var(--wine)";
+            modalScorePill.style.background = passed ? "var(--olive-surface)" : "var(--wine-surface)";
 
-            modalCorrect.textContent = correctCount;
-            modalWrong.textContent = wrongCount;
-            modalUnanswered.textContent = unansweredCount;
+            const elapsedSec = (120 * 60) - examTimerSeconds;
+            const elMin = Math.floor(elapsedSec / 60);
+            const elSec = elapsedSec % 60;
+            modalTimeTaken.textContent = `${elMin}m ${elSec}s`;
 
-            modalMessage.innerHTML = passed
-                ? `Parabéns tchum! Você superou a nota de corte oficial (70%) com <strong>${correctCount} acertos em 100 questões</strong>.`
-                : `Você acertou <strong>${correctCount} de 100</strong> questões. Para passar na prova CCSA 156-215.82 oficial, são necessários no mínimo 70 acertos.`;
+            modalCorrect.textContent = correct;
+            modalWrong.textContent = wrong;
+            modalUnanswered.textContent = unanswered;
 
-            // Populate Module Breakdown
-            moduleBreakdownList.innerHTML = '';
-            for (const [modName, stats] of Object.entries(moduleStats)) {
-                const row = document.createElement('div');
-                row.className = 'module-breakdown-row';
-                const pct = Math.round((stats.correct / stats.total) * 100);
-                row.innerHTML = `
-                    <span class="module-name-short" title="${modName}">${modName}</span>
-                    <span style="font-family: var(--font-mono); font-weight: 600; color: ${pct >= 70 ? 'var(--correct-text)' : 'var(--wrong-text)'};">
-                        ${stats.correct}/${stats.total} (${pct}%)
-                    </span>
-                `;
-                moduleBreakdownList.appendChild(row);
-            }
+            modalMessage.textContent = passed 
+                ? "Parabéns! Excelente pontuação oficial CCSA R82. Você está pronto para o exame!" 
+                : "Não desanime! Revise os módulos com menor aproveitamento no Modo Estudo e tente novamente.";
+
+            // Render breakdown
+            modalModuleBreakdown.innerHTML = '';
             modalModuleBreakdown.style.display = 'block';
+            for (const [mod, stat] of Object.entries(moduleStats)) {
+                const item = document.createElement('div');
+                item.className = 'module-stat-item';
+                const mPct = Math.round((stat.correct / stat.total) * 100);
+                item.innerHTML = `
+                    <div style="font-weight: 500; font-size: 0.82rem; margin-bottom: 2px;">${mod}</div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.76rem; color: var(--text-muted);">
+                        <span>${stat.correct} / ${stat.total} acertadas</span>
+                        <span style="font-weight: 600; color: ${mPct >= 70 ? 'var(--olive)' : 'var(--wine)'};">${mPct}%</span>
+                    </div>
+                `;
+                modalModuleBreakdown.appendChild(item);
+            }
 
             scoreModal.classList.add('open');
-            renderQuestion();
-            renderGrid();
-            saveState();
+            switchMode('exam', true);
         }
 
         // Show Bullets Result
@@ -4739,20 +5399,29 @@
             let wrong = 0;
             let unanswered = 0;
 
-            bulletsPool.forEach(q => {
-                if (bulletsAnswers[q.id] === undefined) unanswered++;
-                else if (bulletsAnswers[q.id] === q.correct) correct++;
-                else wrong++;
+            bulletsOrder.forEach(qPoolIdx => {
+                const q = bulletsPool[qPoolIdx];
+                if (bulletsAnswers[q.id] === undefined) {
+                    unanswered++;
+                } else if (bulletsAnswers[q.id] === q.correct) {
+                    correct++;
+                } else {
+                    wrong++;
+                }
             });
 
-            const pct = Math.round((correct / bulletsPool.length) * 100);
-            modalTitle.firstElementChild.textContent = "Resultado do Treino ⚡ 10 Bullets";
-            modalPercentage.textContent = `${pct}%`;
-            modalPercentage.style.color = pct >= 70 ? "var(--correct-text)" : "var(--wrong-text)";
-            modalStatusText.textContent = `${correct} de 10 acertos rápidos`;
-            modalStatusText.style.color = pct >= 70 ? "var(--correct-text)" : "var(--text-secondary)";
-            modalEmoji.textContent = pct >= 70 ? "⚡" : "🎯";
+            const pct = Math.round((correct / 10) * 100);
+            const passed = pct >= 70;
 
+            modalScorePercent.textContent = `${pct}%`;
+            modalScoreStatus.textContent = passed ? "BOM RITMO!" : "TREINO CONCLUÍDO";
+            modalScoreStatus.style.color = passed ? "var(--olive)" : "var(--wine)";
+
+            modalScorePill.textContent = `${correct} de 10 acertos`;
+            modalScorePill.style.color = passed ? "var(--olive)" : "var(--wine)";
+            modalScorePill.style.background = passed ? "var(--olive-surface)" : "var(--wine-surface)";
+
+            modalTimeTaken.textContent = "--";
             modalCorrect.textContent = correct;
             modalWrong.textContent = wrong;
             modalUnanswered.textContent = unanswered;
@@ -4768,6 +5437,9 @@
             if (currentMode === 'study') {
                 studyShuffleOptions = !studyShuffleOptions;
                 studyOptionOrders = {};
+            } else if (currentMode === 'study2') {
+                study2ShuffleOptions = !study2ShuffleOptions;
+                study2OptionOrders = {};
             } else if (currentMode === 'exam') {
                 examShuffleOptions = !examShuffleOptions;
                 examOptionOrders = {};
@@ -4789,6 +5461,14 @@
                     applyModuleFilter();
                 }
                 studyCurrentIndex = 0;
+            } else if (currentMode === 'study2') {
+                study2Shuffled = !study2Shuffled;
+                if (study2Shuffled) {
+                    study2Order = shuffleArray(study2Order);
+                } else {
+                    applyModuleFilter();
+                }
+                study2CurrentIndex = 0;
             } else if (currentMode === 'exam') {
                 examOrder = shuffleArray(examOrder);
                 examCurrentIndex = 0;
@@ -4801,38 +5481,49 @@
             saveState();
         }
 
-        // Module Filter Application (Study Mode)
+        // Module Filter Application (Study & Study2 Modes)
         function applyModuleFilter(sourceSelect) {
-            if (currentMode !== 'study') return;
+            if (currentMode !== 'study' && currentMode !== 'study2') return;
             selectedModule = sourceSelect ? sourceSelect.value : moduleFilterSelect.value;
 
             // Sync both selects
             moduleFilterSelect.value = selectedModule;
             mobileModuleFilterSelect.value = selectedModule;
 
+            const targetList = (currentMode === 'study') ? BRAVE_QUESTIONS : DAYPO_QUESTIONS;
+            let newOrder = [];
             if (selectedModule === 'all') {
-                studyOrder = BRAVE_QUESTIONS.map((_, i) => i);
+                newOrder = targetList.map((_, i) => i);
             } else {
-                studyOrder = [];
-                BRAVE_QUESTIONS.forEach((q, i) => {
+                targetList.forEach((q, i) => {
                     if (q.category === selectedModule) {
-                        studyOrder.push(i);
+                        newOrder.push(i);
                     }
                 });
             }
 
-            if (studyShuffled) {
-                studyOrder = shuffleArray(studyOrder);
+            if (currentMode === 'study') {
+                if (studyShuffled) newOrder = shuffleArray(newOrder);
+                studyOrder = newOrder;
+                studyCurrentIndex = 0;
+                mapTotalPill.textContent = studyOrder.length.toString();
+                mobileGridTitle.textContent = `Mapa Oficial (${studyOrder.length})`;
+            } else {
+                if (study2Shuffled) newOrder = shuffleArray(newOrder);
+                study2Order = newOrder;
+                study2CurrentIndex = 0;
+                mapTotalPill.textContent = study2Order.length.toString();
+                mobileGridTitle.textContent = `Cenários Daypo (${study2Order.length})`;
             }
-            studyCurrentIndex = 0;
-            mapTotalPill.textContent = studyOrder.length.toString();
+
             renderQuestion();
             renderGrid();
             updateTopStats();
+            saveState();
         }
 
         // LocalStorage Save & Load
-        const STORAGE_KEY = 'ccsa_brave_191_v1';
+        const STORAGE_KEY = 'ccsa_study_v2_split_v1';
 
         function saveState() {
             const state = {
@@ -4842,6 +5533,11 @@
                 studyFlags,
                 studyShuffled,
                 studyShuffleOptions,
+                study2CurrentIndex,
+                study2Answers,
+                study2Flags,
+                study2Shuffled,
+                study2ShuffleOptions,
                 examPoolIds: examPool.map(q => q.id),
                 examAnswers,
                 examFlags,
@@ -4857,13 +5553,13 @@
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
             } catch (e) {
-                console.error("Failed to save state", e);
+                console.warn("Could not save to localStorage", e);
             }
         }
 
         function loadState() {
             try {
-                const raw = localStorage.getItem(STORAGE_KEY);
+                const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('ccsa_brave_233_v1') || localStorage.getItem('ccsa_brave_191_v1');
                 if (!raw) return false;
                 const state = JSON.parse(raw);
 
@@ -4877,47 +5573,56 @@
                 if (state.studyShuffled) studyShuffled = state.studyShuffled;
                 if (state.studyShuffleOptions) studyShuffleOptions = state.studyShuffleOptions;
 
-                // Exam restoration
-                if (state.examPoolIds && state.examPoolIds.length === 100) {
-                    const idMap = new Map(BRAVE_QUESTIONS.map(q => [q.id, q]));
-                    examPool = state.examPoolIds.map(id => idMap.get(id)).filter(Boolean);
+                if (state.study2Answers) study2Answers = state.study2Answers;
+                if (state.study2Flags) study2Flags = state.study2Flags;
+                if (typeof state.study2CurrentIndex === 'number' && state.study2CurrentIndex >= 0 && state.study2CurrentIndex < DAYPO_QUESTIONS.length) {
+                    study2CurrentIndex = state.study2CurrentIndex;
+                } else {
+                    study2CurrentIndex = 0;
+                }
+                if (state.study2Shuffled) study2Shuffled = state.study2Shuffled;
+                if (state.study2ShuffleOptions) study2ShuffleOptions = state.study2ShuffleOptions;
+
+                if (state.examPoolIds && Array.isArray(state.examPoolIds) && state.examPoolIds.length === 100) {
+                    examPool = state.examPoolIds.map(id => BRAVE_QUESTIONS.find(q => q.id === id)).filter(Boolean);
                     if (examPool.length === 100) {
                         examOrder = examPool.map((_, i) => i);
-                        examAnswers = state.examAnswers || {};
-                        examFlags = state.examFlags || {};
-                        examCurrentIndex = (typeof state.examCurrentIndex === 'number' && state.examCurrentIndex >= 0 && state.examCurrentIndex < 100) ? state.examCurrentIndex : 0;
-                        examSubmitted = !!state.examSubmitted;
-                        examTimerSeconds = state.examTimerSeconds || (120 * 60);
+                        if (state.examAnswers) examAnswers = state.examAnswers;
+                        if (state.examFlags) examFlags = state.examFlags;
+                        if (typeof state.examCurrentIndex === 'number') examCurrentIndex = state.examCurrentIndex;
+                        if (state.examSubmitted !== undefined) examSubmitted = state.examSubmitted;
+                        if (typeof state.examTimerSeconds === 'number') examTimerSeconds = state.examTimerSeconds;
+                    } else {
+                        initExamMode(true);
                     }
                 }
 
-                // Bullets restoration
-                if (state.bulletsPoolIds && state.bulletsPoolIds.length === 10) {
-                    const idMap = new Map(BRAVE_QUESTIONS.map(q => [q.id, q]));
-                    bulletsPool = state.bulletsPoolIds.map(id => idMap.get(id)).filter(Boolean);
+                if (state.bulletsPoolIds && Array.isArray(state.bulletsPoolIds) && state.bulletsPoolIds.length === 10) {
+                    bulletsPool = state.bulletsPoolIds.map(id => BRAVE_QUESTIONS.find(q => q.id === id)).filter(Boolean);
                     if (bulletsPool.length === 10) {
                         bulletsOrder = bulletsPool.map((_, i) => i);
-                        bulletsAnswers = state.bulletsAnswers || {};
-                        bulletsFlags = state.bulletsFlags || {};
-                        bulletsCurrentIndex = (typeof state.bulletsCurrentIndex === 'number' && state.bulletsCurrentIndex >= 0 && state.bulletsCurrentIndex < 10) ? state.bulletsCurrentIndex : 0;
-                        bulletsSubmitted = !!state.bulletsSubmitted;
+                        if (state.bulletsAnswers) bulletsAnswers = state.bulletsAnswers;
+                        if (state.bulletsFlags) bulletsFlags = state.bulletsFlags;
+                        if (typeof state.bulletsCurrentIndex === 'number') bulletsCurrentIndex = state.bulletsCurrentIndex;
+                        if (state.bulletsSubmitted !== undefined) bulletsSubmitted = state.bulletsSubmitted;
+                    } else {
+                        initBulletsMode(true);
                     }
                 }
 
-                if (state.currentMode && ['study', 'exam', 'bullets'].includes(state.currentMode)) {
-                    currentMode = state.currentMode;
-                }
+                if (state.currentMode) currentMode = state.currentMode;
                 return true;
             } catch (e) {
-                console.error("Failed to load state", e);
+                console.warn("Could not load localStorage state", e);
                 return false;
             }
         }
 
-        // Event Listeners Setup
+        // Setup All Event Listeners
         function setupEventListeners() {
             // Mode buttons
             btnStudyMode.addEventListener('click', () => switchMode('study'));
+            btnStudyV2Mode.addEventListener('click', () => switchMode('study2'));
             btnExamMode.addEventListener('click', () => switchMode('exam'));
             btnBulletsMode.addEventListener('click', () => switchMode('bullets'));
 
@@ -4954,46 +5659,39 @@
             shuffleOptsBtn.addEventListener('click', toggleOptionShuffle);
             shuffleQuestionsBtn.addEventListener('click', toggleQuestionShuffle);
 
-            // Module filter listeners (both desktop and mobile)
-            moduleFilterSelect.addEventListener('change', () => applyModuleFilter(moduleFilterSelect));
-            mobileModuleFilterSelect.addEventListener('change', () => applyModuleFilter(mobileModuleFilterSelect));
+            // Module filter
+            moduleFilterSelect.addEventListener('change', (e) => applyModuleFilter(e.target));
+            mobileModuleFilterSelect.addEventListener('change', (e) => applyModuleFilter(e.target));
 
-            // Grid filter chips (both desktop aside and mobile modal)
+            // Grid filter chips
             document.querySelectorAll('.filter-chip').forEach(chip => {
                 chip.addEventListener('click', () => {
-                    const filterVal = chip.getAttribute('data-filter');
-                    currentFilter = filterVal;
-                    document.querySelectorAll('.filter-chip').forEach(c => {
-                        c.classList.toggle('active', c.getAttribute('data-filter') === filterVal);
-                    });
+                    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                    chip.classList.add('active');
+                    currentFilter = chip.getAttribute('data-filter');
                     renderGrid();
                 });
             });
 
             // Exam & Bullets buttons
             finishExamBtn.addEventListener('click', () => finishExam());
-            mobileFinishExamBtn.addEventListener('click', () => {
-                mobileGridModal.classList.remove('open');
-                finishExam();
-            });
-
             newExamBtn.addEventListener('click', () => {
                 initExamMode(true);
-                switchMode('exam', true);
+                switchMode('exam');
             });
 
             newBulletsBtn.addEventListener('click', () => {
                 initBulletsMode(true);
-                switchMode('bullets', true);
-            });
-
-            mobileNewBulletsBtn.addEventListener('click', () => {
-                mobileGridModal.classList.remove('open');
-                initBulletsMode(true);
-                switchMode('bullets', true);
+                switchMode('bullets');
             });
 
             finishBulletsBtn.addEventListener('click', showBulletsResult);
+
+            mobileFinishExamBtn.addEventListener('click', () => finishExam());
+            mobileNewBulletsBtn.addEventListener('click', () => {
+                initBulletsMode(true);
+                switchMode('bullets');
+            });
 
             // Modals
             closeModalBtn.addEventListener('click', () => scoreModal.classList.remove('open'));
@@ -5002,10 +5700,10 @@
                 scoreModal.classList.remove('open');
                 if (currentMode === 'exam') {
                     initExamMode(true);
-                    switchMode('exam', true);
+                    renderQuestion();
                 } else if (currentMode === 'bullets') {
                     initBulletsMode(true);
-                    switchMode('bullets', true);
+                    renderQuestion();
                 }
             });
 
@@ -5018,6 +5716,10 @@
                     studyAnswers = {};
                     studyFlags = {};
                     studyCurrentIndex = 0;
+                } else if (currentMode === 'study2') {
+                    study2Answers = {};
+                    study2Flags = {};
+                    study2CurrentIndex = 0;
                 } else if (currentMode === 'exam') {
                     initExamMode(true);
                 } else if (currentMode === 'bullets') {
@@ -5067,6 +5769,9 @@
                 } else if (e.key === '4' || e.key === 'd' || e.key === 'D') {
                     const opts = optionsList.querySelectorAll('.option-item');
                     if (opts[3]) opts[3].click();
+                } else if (e.key === '5' || e.key === 'e' || e.key === 'E') {
+                    const opts = optionsList.querySelectorAll('.option-item');
+                    if (opts[4]) opts[4].click();
                 } else if (e.key === 'f' || e.key === 'F') {
                     toggleFlag();
                 } else if (e.key === 'Escape') {
@@ -5084,6 +5789,7 @@
                 document.documentElement.setAttribute('data-theme', savedTheme);
 
                 initStudyOrder();
+                initStudy2Order();
                 initExamMode();
                 initBulletsMode();
 
@@ -5104,6 +5810,7 @@
         } else {
             initApp();
         }
+    
     </script>
 </body>
 </html>
